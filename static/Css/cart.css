@@ -1,0 +1,262 @@
+/*页面相关属性*/
+body{
+    font: 12px "Microsoft", "微软雅黑";
+    color: #9a9a9a;
+}
+/*清除默认样式*/
+body, h1, h2, h3, h4, h5, h6, p, ul, ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #9a9a9a;
+}
+a:hover{
+    color: #64a131;
+}
+/*页面整体效果*/
+#container{
+    width: 990px;
+    margin: 0 auto;
+}
+/*导航*/
+#Nav{
+    height: 30px;
+    line-height: 30px;
+    background-color: #eeeeee;
+}
+/*右侧导航*/
+#Nav .rightNav{
+    float: right;
+}
+#Nav .rightNav li{
+    float: left;
+    padding: 0 5px;
+    line-height: 30px;
+    /*margin:7px 5px;*/
+    /*!*padding: 0 10px 0 0;*!改为通过b元素添加*/
+    /*border-right: 1px solid #9c9a9c;*/
+}
+#Nav .rightNav li b{
+    display: inline-block;
+    height: 12px;
+    margin-right: 10px;
+    border-left: 1px solid #9a9a9a;
+}
+/*左侧导航*/
+#Nav .leftNav>li{
+    float: left;
+    margin: 0 0 0 10px;
+}
+#Nav .leftNav li i{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-top: 6px solid #64a131;
+    position: relative;
+    top: 4px;
+}
+
+
+/*下拉菜单*/
+#Nav .address{
+    position: relative;
+}
+#Nav .select{
+    position: absolute;
+    display: none;
+    z-index: 100;
+    color: black;
+    cursor: pointer;
+}
+#Nav .address:hover .select{
+    display: block;
+    background: rgba(255,0,0,.5);
+}
+#Nav .select.li:hover{
+    font-weight: bold;
+}
+
+
+
+/*横幅*/
+#banner{
+    width: 100%;
+    margin: 15px 0;
+    position: relative;
+}
+
+#banner div>img{
+    width: 100%;
+}
+
+/*切换class*/
+#banner div{
+    width: 990px;
+    height: 207px;
+}
+#banner div>img{
+    width: 100%;
+    display: none;
+}
+#banner .see{
+    display: block;
+}
+
+#banner .imgNav{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+#banner li{
+    float: left;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #64a131;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    margin: 0 auto;
+}
+/*第一张图片默认显示，索引的背景色为红色*/
+#banner li:first-child{
+    /*background-color: red;*/
+}
+#commend{
+    font-size: 0;
+}
+#commend img{
+    width: 240px;
+    margin-right: 10px;
+}
+#commend a .lastImg{
+    margin: 0;
+}
+
+
+
+#main .title{
+    margin: 10px 0;
+    height: 32px;
+    background-color: #cccccc;
+    border: 1px solid #918f91;
+}
+#main .title>p{
+    float: left;
+    line-height: 32px;
+}
+#main .checkBox{
+    width: 132px;
+}
+#main .goods{
+    width: 378px;
+}
+#main .price{
+    width: 160px;
+    text-align: center;
+}
+#main .count{
+    width: 80px;
+    text-align: center;
+}
+#main .sum{
+    width: 140px;
+    text-align: center;
+}
+#main .action{
+    width: 85px;
+    text-align: right;
+    cursor: pointer;
+}
+#main #checkAll{
+    vertical-align: middle;
+}
+/*商品*/
+#main .g-item{
+    border-top: 2px solid #999;
+    border-bottom: 1px solid #999;
+    padding: 10px 0;
+    overflow: hidden;
+    margin-top: 25px;
+}
+#main .g-item>p{
+    float: left;
+}
+#main .checkBox img{
+    width: 80px;
+    height: 80px;
+}
+#main .checkBox [name=check]{
+    vertical-align: top;
+}
+#main .count input{
+    float: left;
+    border: none;
+    border-top: 1px solid #918f91;
+    border-bottom: 1px solid #918f91;
+    width: 42px;
+    height: 18px;
+    padding: 0 1px 0;
+    outline: none;
+    text-align: center;
+}
+#main .count a{
+    float: left;
+    display: inline-block;
+    border: 1px solid #918f91;
+    width: 16px;
+    height: 18px;
+    line-height: 16px;
+    padding: 0;
+    outline: none;
+    text-align: center;
+}
+/*底部工具栏*/
+#commit-right{
+    position:fixed;
+    height: 50px;
+    width: 990px;
+    bottom:0;
+    background-color: white;
+
+}
+#cart-toolbar{
+    /*position:fixed;*/
+    /*right:0;*/
+    /*bottom:0;*/
+    line-height:50px;
+    float: right;
+}
+#cart-toolbar p{
+	float:left;
+}
+#cart-toolbar span{
+	color:#e4393c;
+	font-size:16px;
+	font-weight:700;
+	margin:0 7px;
+}
+#cart-toolbar .submit-count{
+	margin:0 20px;
+}
+#cart-toolbar .submit-btn{
+	background:#e4393c;
+	width:80px;
+	text-align:center;
+	color:white;
+	font-weight:700;
+	font-size:20px;
+	margin-left:20px;
+	cursor: pointer;
+}
+
+.g-item [name="check"]{
+	vertical-align:top;
+}
+#clear{
+    height: 50px;
+}

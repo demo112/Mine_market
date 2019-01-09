@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>自动登录</title>
+</head>
+<body>
+{{ errMsq }}
+<form action="/03-register" enctype="multipart/form-data" method="post">
+    <div>
+        登陆名称
+        <input type="text" value="" name="uname">
+    </div>
+    <div>
+        用户昵称
+        <input type="text" value="" name="nickname">
+    </div>
+    <div>
+        登陆密码
+        <input type="password" value="" name="upsw">
+    </div>
+    <div>
+        <input type="checkbox" name="remember">记住密码
+    </div>
+    <div>
+        <input type="submit" value="登陆">
+    </div>
+</form>
+
+</body>
+</html>

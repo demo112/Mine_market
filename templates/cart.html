@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>天天果园</title>
+    <link rel="stylesheet" href="../static/Css/cart.css">
+    <script src="../static/Js/jquery-1.11.3.js"></script>
+    <script src="../static/Js/cart.js"></script>
+</head>
+<body>
+<div id="container">
+    <!--导航-->
+    <div id="Nav">
+        <ul class="rightNav">
+            <li>
+                <a href="signup.html">[ 登 陆 ]</a>
+                <a href="signup.html">[ 注 册 ]</a>
+            </li>
+            <li><b></b><a href="">果园公告</a></li>
+            <li><b></b><a href="">券卡兑换</a></li>
+            <li><b></b><a href="">手机果园</a></li>
+        </ul>
+        <ol class="leftNav">
+            <li class="address">
+                <span class="currentAddress">地址</span>
+                <i></i>
+                <ul class="select">
+                    <li>上海</li>
+                    <li>北京</li>
+                    <li>广州</li>
+                    <li>山东</li>
+                </ul>
+            </li>
+            <li>满百包邮（环郊外）</li>
+            <li><a href="">星夜达</a></li>
+            <li><a href="index.html">返回主页</a></li>
+        </ol>
+    </div>
+    <!--横幅-->
+    <div id="banner">
+        <div>
+            <img id="banner1" class='see' src="../static/images/banner1.jpg" alt="">
+            <img id="banner2" class='' src="../static/images/banner2.jpg" alt="">
+            <img id="banner3" class='' src="../static/images/banner1.jpg" alt="">
+            <img id="banner4" class='' src="../static/images/banner2.jpg" alt="">
+            <ul class="imgNav">
+                <!--切换class-->
+                <!--<li onclick="change(0)">1</li>-->
+                <!--<li onclick="change(1)">2</li>-->
+                <!--<li onclick="change(2)">3</li>-->
+                <!--<li onclick="change(3)">4</li>-->
+
+                <li onclick="change(0)">1</li>
+                <li onclick="change(1)">2</li>
+                <li onclick="change(2)">3</li>
+                <li onclick="change(3)">4</li>
+            </ul>
+            <script>
+                // function change(n) {
+                //     var $see1 = $('#banner1');
+                //     var $see2 = $('#banner2');
+                //     if (n === 0) {
+                //         $see1.css("display", 'block');
+                //         $('#banner li:first-child').css('background','red');
+                //         $('#banner li:last-child').css('background','green');
+                //         $see2.css("display", 'none');
+                //     } else
+                //     if (n === 1) {
+                //         $see2.css("display", 'block');
+                //         $('#banner li:first-child').css('background','green');
+                //         $('#banner li:last-child').css('background','red');
+                //         $see1.css("display", 'none');
+                //     }
+                // }
+                // 切换类实现图片切换
+                function change(n) {
+                    var $see = $('#banner div img');
+                    console.log('src');
+                    $($see).removeClass('see');
+                    $($see[n]).attr('class','see');
+                    console.log($see);
+                }
+            </script>
+        </div>
+    </div>
+    <!--推荐位-->
+    <div id="commend">
+        <a href="http://www.bilibili.com" target="_blank">
+            <img src="../static/images/2ba20598135dbba5e97d241ebfa167d9.jpg" alt="">
+        </a>
+        <a href="http://www.bilibili.com" target="_blank">
+            <img src="../static/images/2ba20598135dbba5e97d241ebfa167d9.jpg" alt="">
+        </a>
+        <a href="http://www.bilibili.com" target="_blank">
+            <img src="../static/images/2ba20598135dbba5e97d241ebfa167d9.jpg" alt="">
+        </a>
+        <a href="http://www.bilibili.com" target="_blank" >
+            <img src="../static/images/2ba20598135dbba5e97d241ebfa167d9.jpg" alt="" class="lastImg">
+        </a>
+    </div>
+    <!--主题-->
+    <div id="main">
+        <!--标题工具栏-->
+        <div class="title">
+            <p class="checkBox">
+                <label>
+                    <input type="checkbox" name="checkAll" id="checkAll">
+                </label>
+                全选
+            </p>
+            <p class="goods">商品</p>
+            <p class="price">单价</p>
+            <p class="count">数量</p>
+            <p class="sum">小计</p>
+            <p class="action">操作</p>
+        </div>
+        <div class="content">
+            <div class="g-item">
+                <p class="checkBox">
+                        <input type="checkbox" name="check">
+                    <img src="../static/images/1-270x270-2114-226C8S26.jpg" alt="图标未加载">
+                </p>
+                <p class="goods">
+                    欢乐时光水果果篮
+                </p>
+                <p class="price">&yen;188</p>
+                <p class="count">
+                    <a href="javaScript:void(0)" class="minus">-</a>
+                        <input type="text" value="1">
+                    <a href="javaScript:void(0)" class="add">+</a>
+                </p>
+                <p class="sum">
+                    <b>&yen;188</b>
+                </p>
+                <p class="action">移除</p>
+            </div>
+            <div class="g-item">
+                <p class="checkBox">
+                        <input type="checkbox" name="check">
+                    <img src="../static/images/1-270x270-2114-226C8S26.jpg" alt="图标未加载">
+                </p>
+                <p class="goods">
+                    欢乐时光水果果篮
+                </p>
+                <p class="price">&yen;188</p>
+                <p class="count">
+                    <a href="javaScript:void(0)" class="minus">-</a>
+                        <input type="text" value="1">
+                    <a href="javaScript:void(0)" class="add">+</a>
+                </p>
+                <p class="sum">
+                    <b>&yen;188</b>
+                </p>
+                <p class="action">移除</p>
+            </div>
+            <div class="g-item">
+                <p class="checkBox">
+                        <input type="checkbox" name="check">
+                    <img src="../static/images/1-270x270-2114-226C8S26.jpg" alt="图标未加载">
+                </p>
+                <p class="goods">
+                    欢乐时光水果果篮
+                </p>
+                <p class="price">&yen;188</p>
+                <p class="count">
+                    <a href="javaScript:void(0)" class="minus">-</a>
+                        <input type="text" value="1">
+                    <a href="javaScript:void(0)" class="add">+</a>
+                </p>
+                <p class="sum">
+                    <b>&yen;188</b>
+                </p>
+                <p class="action">移除</p>
+            </div>
+            <div id="clear"></div>
+        </div>
+
+        <!--标题工具栏-->
+        <!--<div class="content" id="cart-toolbar">-->
+            <!--<div class="commit-right">-->
+                <!--<p class="submit-count">-->
+                    <!--已选择-->
+                    <!--<span>2</span>-->
+                    <!--件商品-->
+                <!--</p>-->
+                <!--<p class="submit-price">-->
+                    <!--总价：-->
+                    <!--&yen188-->
+                <!--</p>-->
+                <!--<p class="submit-btn">-->
+                    <!--去结算-->
+                <!--</p>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div class="content" id="commit-right">
+            <div id="cart-toolbar">
+                <p class="submit-count">
+                    已选择<span></span>件商品
+                </p>
+                <p class="submit-price">
+                    总价 : <span></span>
+                </p>
+                <p class="submit-btn">去结算</p>
+            </div>
+            </div>
+        </div>
+</div>
+</body>
+</html>

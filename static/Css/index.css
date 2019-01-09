@@ -1,0 +1,190 @@
+/*页面相关属性*/
+body{
+    font: 12px "Microsoft", "微软雅黑";
+    color: #9a9a9a;
+}
+/*清除默认样式*/
+body, h1, h2, h3, h4, h5, h6, p, ul, ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #9a9a9a;
+}
+a:hover{
+    color: #64a131;
+}
+/*页面整体效果*/
+#container{
+    width: 990px;
+    margin: 0 auto;
+}
+/*导航*/
+#Nav{
+    height: 30px;
+    line-height: 30px;
+    background-color: #eeeeee;
+}
+/*右侧导航*/
+#Nav .rightNav{
+    float: right;
+
+}
+#Nav .rightNav li{
+    float: left;
+    padding: 0 5px;
+    line-height: 30px;
+    /*margin:7px 5px;*/
+    /*!*padding: 0 10px 0 0;*!改为通过b元素添加*/
+    /*border-right: 1px solid #9c9a9c;*/
+}
+#Nav .rightNav li b{
+    display: inline-block;
+    height: 12px;
+    margin-right: 10px;
+    border-left: 1px solid #9a9a9a;
+}
+/*左侧导航*/
+#Nav .leftNav>li{
+    float: left;
+    margin: 0 0 0 10px;
+}
+#Nav .leftNav li i{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-top: 6px solid #64a131;
+    position: relative;
+    top: 4px;
+}
+
+
+/*下拉菜单*/
+#Nav .address{
+    position: relative;
+}
+#Nav .select{
+    position: absolute;
+    display: none;
+    z-index: 100;
+    color: black;
+    cursor: pointer;
+}
+#Nav .address:hover .select{
+    display: block;
+    background: rgba(255,0,0,.5);
+}
+#Nav .select.li:hover{
+    font-weight: bold;
+}
+
+
+
+/*横幅*/
+#banner{
+    width: 100%;
+    margin: 15px 0;
+    position: relative;
+}
+
+#banner div>img{
+    width: 100%;
+}
+
+/*!*切换class*!*/
+/*#banner div{*/
+    /*width: 990px;*/
+    /*height: 207px;*/
+/*}*/
+/*#banner div>img{*/
+    /*width: 100%;*/
+    /*display: none;*/
+/*}*/
+/*#banner .see{*/
+    /*display: block;*/
+/*}*/
+
+#banner .imgNav{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+#banner li{
+    float: left;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #64a131;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    margin: 0 auto;
+}
+/*第一张图片默认显示，索引的背景色为红色*/
+#banner li:first-child{
+    /*background-color: red;*/
+}
+#commend{
+    font-size: 0;
+}
+#commend img{
+    width: 240px;
+    margin-right: 10px;
+}
+#commend a .lastImg{
+    margin: 0;
+}
+/*主题*/
+#main{
+    margin-top: 25px;
+}
+#main .goodsTitle{
+    border-top: 1px solid #cccccc;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+#main .goodsTitle>a{
+    color: #333333;
+    float: right;
+}
+
+/*商品信息展示*/
+#main ul{
+    overflow: hidden;
+    margin: 10px 0;
+}
+#main li>img{
+    width: 190px;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+/*图片缩放*/
+#main li>img:hover{
+    transform: scale(1.1);
+    transition-delay: .1s;
+    overflow: hidden;
+}
+#main a{
+    float: right;
+    /*top: 10px;*/
+    margin-top: 10px;
+}
+#main ul>li{
+    float: left;
+    width: 190px;
+    margin-right: 10px;
+}
+#main ul p{
+    margin:5px 0 3px 3px;
+    color: #555555;
+}
+#main ul span{
+    margin: 0 0 0 10px;
+}
+#main .lastgood{
+    margin: 0;
+}

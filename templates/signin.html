@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>会员注册</title>
+    <link rel="stylesheet" href="../static/Css/signin.css">
+    <script src="../static/Js/jquery-1.11.3.js"></script>
+    <script src="../static/Js/index.js"></script>
+</head>
+<body>
+    <div id="container">
+        <h2>会员注册</h2>
+        <div id="main">
+            <div class="left">
+                <img src="../static/images/huiyuan.jpg" height="400" width="500" alt="会员图加载失败"/>
+                <!--<a href="">会员注册</a>-->
+            </div>
+            <div class="right">
+                <form action="/signin" enctype="multipart/form-data" method="post">
+                    <div class="form-line">
+                        <p class="clearstamp">账号邮箱</p>
+                        <label>
+                            <input
+                                    class="uinput"
+                                    type="text"
+                                    name="uemail"
+                                    onblur="check_name('uemail')"
+                            >
+                        </label>
+                        <p id="check_email"></p>
+                    </div>
+                    <div class="form-line">
+                        <p class="clearstamp">昵&nbsp&nbsp&nbsp称</p>
+                        <label>
+                            <input
+                                    class="uinput"
+                                    type="text"
+                                    name="nickname"
+                                    onblur="check_name('nickname')"
+                            >
+                        </label>
+                        <p id="check_nickname"></p>
+                    </div>
+                    <div class="form-line">
+                        <p class="clearstamp">手机号</p>
+                        <label>
+                            <input
+                                    class="uinput"
+                                    type="text"
+                                    name="uphone"
+                                    onblur="check_name('uphone')">
+                        </label>
+                        <p id="check_phone"></p>
+                    </div>
+                    <div class="form-line">
+                        <p class="clearstamp">设置密码</p>
+                        <label>
+                            <input
+                                    class="uinput"
+                                    type="password"
+                                    name="upwd1"
+                                    placeholder="请输入6-20位密码"
+                                    maxlength="20"
+                                    minlength="6"
+                            >
+                        </label>
+                        <p></p>
+                    </div>
+                    <div class="form-line">
+                        <p class="clearstamp">确认密码</p>
+                        <label>
+                            <input
+                                    class="uinput"
+                                    type="password"
+                                    name="upwd2"
+                                    placeholder="请再次确认"
+                                    maxlength="20"
+                                    minlength="6"
+                                    onblur="check_pwd_same()"
+                            >
+                        </label>
+                        <p></p>
+                    </div>
+                     <div class="form-line">
+                        <p class="clearstamp"></p>
+                        <div id="check">
+                            <input type="submit" value="注册会员">
+                            <a href="/signup" target="_self">我有账号</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

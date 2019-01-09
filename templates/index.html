@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>天天果园</title>
+    <link rel="stylesheet" href="../static/Css/index.css">
+    <script src="../static/Js/jquery-1.11.3.js"></script>
+    <script src="../static/Js/index.js"></script>
+</head>
+<body>
+<div id="container">
+    <!--导航-->
+    <div id="Nav">
+        <ul class="rightNav">
+            <li>
+                {% block user_log %}
+                    <input type="hidden" name="isSignup" value="0">
+                    {% if user %}
+                        <a href="#">{{ nickname }}</a>
+                        <a href="/logout">[ 注  销 ]</a>
+                    {% else %}
+                        <a href="/signup">[ 登 陆 ]</a>
+                        <a href="/signin">[ 注 册 ]</a>
+                    {% endif %}
+                {% endblock %}
+            </li>
+            <li><b></b><a href="">果园公告</a></li>
+            <li><b></b><a href="">券卡兑换</a></li>
+            <li><b></b><a href="">手机果园</a></li>
+        </ul>
+        <ol class="leftNav">
+            <li class="address">
+                <span class="currentAddress">地址</span>
+                <i></i>
+                <ul class="select">
+                    <li>上海</li>
+                    <li>北京</li>
+                    <li>广州</li>
+                    <li>山东</li>
+                </ul>
+            </li>
+            <li>满百包邮（环郊外）</li>
+            <li><a href="">星夜达</a></li>
+        </ol>
+    </div>
+    <!--横幅-->
+    <div id="banner">
+        <div>
+            <img id="banner1" class='see' src="../static/images/banner1.jpg" alt="">
+            <img id="banner2" class='' src="../static/images/banner2.jpg" alt="">
+            <img id="banner3" class='' src="../static/images/banner1.jpg" alt="">
+            <img id="banner4" class='' src="../static/images/banner2.jpg" alt="">
+            <ul class="imgNav">
+                <!--切换class-->
+                <!--<li onclick="change(0)">1</li>-->
+                <!--<li onclick="change(1)">2</li>-->
+                <!--<li onclick="change(2)">3</li>-->
+                <!--<li onclick="change(3)">4</li>-->
+
+                <li onclick="change(0)">1</li>
+                <li onclick="change(1)">2</li>
+                <li onclick="change(2)">3</li>
+                <li onclick="change(3)">4</li>
+            </ul>
+            <script>
+                // function change(n) {
+                //     var $see1 = $('#banner1');
+                //     var $see2 = $('#banner2');
+                //     if (n === 0) {
+                //         $see1.css("display", 'block');
+                //         $('#banner li:first-child').css('background','red');
+                //         $('#banner li:last-child').css('background','green');
+                //         $see2.css("display", 'none');
+                //     } else
+                //     if (n === 1) {
+                //         $see2.css("display", 'block');
+                //         $('#banner li:first-child').css('background','green');
+                //         $('#banner li:last-child').css('background','red');
+                //         $see1.css("display", 'none');
+                //     }
+                // }
+                // 切换类实现图片切换
+                // function change(n) {
+                //     var $see = $('#banner div img');
+                //     console.log('src');
+                //     $($see).removeClass('see');
+                //     $($see[n]).attr('class','see');
+                //     console.log($see);
+                // }
+            </script>
+        </div>
+    </div>
+    <!--推荐位-->
+    <div id="commend">
+        <a href="http://www.bilibili.com" target="_blank">
+            <img src="../static/images/2ba20598135dbba5e97d241ebfa167d9.jpg" alt="">
+        </a>
+        <a href="http://www.bilibili.com" target="_blank">
+            <img src="../static/images/2ba20598135dbba5e97d241ebfa167d9.jpg" alt="">
+        </a>
+        <a href="http://www.bilibili.com" target="_blank">
+            <img src="../static/images/2ba20598135dbba5e97d241ebfa167d9.jpg" alt="">
+        </a>
+        <a href="http://www.bilibili.com" target="_blank" >
+            <img src="../static/images/2ba20598135dbba5e97d241ebfa167d9.jpg" alt="" class="lastImg">
+        </a>
+    </div>
+    <!--主题-->
+    <div id="main">
+        <!--全球量贩。食品生鲜，模块结构复用-->
+        <div class="goodsType">
+            <p class="goodsTitle">
+                <img src="../static/images/t4.png" alt="t4未加载">
+                <a href="">更多</a>
+            </p>
+            <!--商品展示-->
+            <ul>
+                <li>
+                    <img src="../static/images/1-270x270-695-F2BSB4DC.jpg" alt="">
+                    <div>
+                        <a href=""><img src="../static/images/cart.png" alt=""></a>
+                        <p>欢乐时光水果果篮</p>
+                        <span>&yen;188.00/份</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="../static/images/1-270x270-430-9RBRWTU9.jpg" alt="">
+                    <div>
+                        <a href=""><img src="../static/images/cart.png" alt=""></a>
+                        <p>欢乐时光水果果篮</p>
+                        <span>&yen;188.00/份</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="../static/images/1-270x270-435-8829CP99.jpg" alt="">
+                    <div>
+                        <a href=""><img src="../static/images/cart.png" alt=""></a>
+                        <p>欢乐时光水果果篮</p>
+                        <span>&yen;188.00/份</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="../static/images/1-270x270-701-CB41CHUW.jpg" alt="">
+                    <div>
+                        <a href=""><img src="../static/images/cart.png" alt=""></a>
+                        <p>欢乐时光水果果篮</p>
+                        <span>&yen;188.00/份</span>
+                    </div>
+                </li>
+                <li class="lastgood">
+                    <img src="../static/images/1-270x270-2109-SDK5WUW8.jpg" alt="">
+                    <div>
+                        <a href=""><img src="../static/images/cart.png" alt=""></a>
+                        <p>欢乐时光水果果篮</p>
+                        <span>&yen;188.00/份</span>
+                    </div>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <img src="../static/images/1-270x270-695-F2BSB4DC.jpg" alt="">
+                    <div>
+                        <a href=""><img src="../static/images/cart.png" alt=""></a>
+                        <p>欢乐时光水果果篮</p>
+                        <span>&yen;188.00/份</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="../static/images/1-270x270-430-9RBRWTU9.jpg" alt="">
+                    <div>
+                        <a href=""><img src="../static/images/cart.png" alt=""></a>
+                        <p>欢乐时光水果果篮</p>
+                        <span>&yen;188.00/份</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="../static/images/1-270x270-435-8829CP99.jpg" alt="">
+                    <div>
+                        <a href=""><img src="../static/images/cart.png" alt=""></a>
+                        <p>欢乐时光水果果篮</p>
+                        <span>&yen;188.00/份</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="../static/images/1-270x270-701-CB41CHUW.jpg" alt="">
+                    <div>
+                        <a href=""><img src="../static/images/cart.png" alt=""></a>
+                        <p>欢乐时光水果果篮</p>
+                        <span>&yen;188.00/份</span>
+                    </div>
+                </li>
+                <li class="lastgood">
+                    <img src="../static/images/1-270x270-2109-SDK5WUW8.jpg" alt="">
+                    <div>
+                        <a href=""><img src="../static/images/cart.png" alt=""></a>
+                        <p>欢乐时光水果果篮</p>
+                        <span>&yen;188.00/份</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

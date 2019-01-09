@@ -1,0 +1,128 @@
+/*清楚默认样式*/
+
+body, h2, p{
+    margin: 0;
+}
+a{
+    color: #64A131;
+    text-decoration: none;
+}
+h2{
+    color: gray;
+    font-weight: normal;
+    padding: 20px;
+    border-bottom: 1px solid #9c9a9c;
+    margin-bottom: 20px;
+}
+#container{
+    width: 990px;
+    margin: 0 auto;
+}
+#main{
+    /*父元素高度为0*/
+    overflow: hidden;
+}
+.left{
+    float: left;
+    position: relative;
+}
+.left a{
+    position: absolute;
+    right: 175px;
+    bottom: 20px;
+    border: 1px solid #64a131;
+    border-radius: 5px;
+    width: 150px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 20px;
+}
+
+.right{
+    position: relative;
+    float: right;
+    margin-top: 70px;
+    margin-right: 40px;
+}
+.form-line{
+    height: 40px;
+    margin-bottom: 40px;
+}
+.clearstamp{
+    width: 80px;
+}
+.form-line>.clearstamp {
+    height: 40px;
+}
+.form-line>p{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 20px;
+}
+.form-line .uinput{
+    width: 300px;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+}
+.form-line>div>p{
+    float: right;
+}
+.form-line>p>a{
+    width: 180px;
+    color: #999999;
+    text-decoration: underline;
+}
+.isSave{
+    width: 140px;
+    height: 40px;
+    vertical-align: middle;
+}
+#check{
+    position: relative;
+    left: 0;
+    top: 20px;
+}
+#check>a{
+    position: relative;
+    float: left;
+    margin-left: 10px;
+    box-sizing: border-box;
+
+
+
+    width: 140px;
+    height: 45px;
+
+    bottom: 20px;
+    border: 1px solid #64a131;
+    border-radius: 5px;
+
+    text-align: center;
+    line-height: 45px;
+    font-size: 20px;
+}
+#check>input{
+    position: relative;
+    float: left;
+    margin-right: 10px;
+    box-sizing: padding-box;
+
+    width: 140px;
+    height: 45px;
+
+    bottom: 20px;
+    border: 1px solid #64a131;
+    border-radius: 5px;
+
+    color: white;
+    background-color: #64a131;
+    text-align: center;
+    line-height: 45px;
+    font-size: 20px;
+}
